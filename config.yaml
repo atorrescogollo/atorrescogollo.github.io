@@ -6,6 +6,8 @@ defaultContentLanguage: es
 title: Álvaro Torres Cogollo - Portfolio
 theme: toha
 
+googleAnalytics: G-P8V48J24NC
+
 # Manage languages
 # For any more details, you can check the official documentation: https://gohugo.io/content-management/multilingual/
 languages:
