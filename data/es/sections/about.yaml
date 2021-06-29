@@ -40,6 +40,9 @@ socialLinks:
   - name: GitHub
     icon: "fab fa-github"
     url: "https://github.com/atorrescogollo"
+  - name: LinkedIn
+    icon: "fab fa-linkedin"
+    url: "https://www.linkedin.com/in/atorrescogollo"
   - name: TheHackerWay
     icon: "fas fa-blog"
     url: "https://thehackerway.com/author/atorrescogollo/"
