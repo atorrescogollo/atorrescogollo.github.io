@@ -1,0 +1,68 @@
+# section information
+section:
+  name: About
+  id: about
+  enable: true
+  weight: 10
+  showOnNavbar: true
+  template: sections/about.html
+
+# your designation
+designation: Ingeniero DevOps
+# your company information
+company:
+  name: Telefónica
+  url: "https://www.telefonica.com/es/web/about_telefonica/quienes_somos"
+
+# your resume. this file path should be relative to you "static" directory
+resume: "files/atorrescogollo_CV.pdf"
+
+# a summary about you
+summary: |
+  Soy un Ingeniero Telemático que trabaja como **Ingeniero DevOps**.
+  Empezé a estudiar de forma **autodidacta** sobre **Hacking Ético**
+  combinándolo con la Universidad. Actualmente trabajo ofreciendo
+  infraestructura, servicios y soporte a equipos de desarrollo dentro
+  de **Telefónica**.
+
+  He escrito artículos en el **blog técnico de seguridad
+  [TheHackerWay](https://thehackerway.com/author/atorrescogollo/)**
+  y algunas de las [**herramientas**](https://github.com/atorrescogollo)
+  más relevantes que he desarrollado son:
+  [Offensive Tor Toolkit](https://github.com/atorrescogollo/offensive-tor-toolkit),
+  [Kubespray Deployer](https://github.com/atorrescogollo/kubespray-deployer),
+  [linux-ansible](https://github.com/atorrescogollo/linux-ansible) y
+  [proxmox-ansible](https://github.com/atorrescogollo/proxmox-ansible).
+
+# your social links
+# give as many as you want. use font-awesome for the icons.
+socialLinks:
+  - name: GitHub
+    icon: "fab fa-github"
+    url: "https://github.com/atorrescogollo"
+  - name: TheHackerWay
+    icon: "fas fa-blog"
+    url: "https://thehackerway.com/author/atorrescogollo/"
+
+# your soft skills
+# give the percentage between 50 to 100 with 5 intervals.
+# currently supported colors: blue, yellow, pink, green, sky, orange
+softSkills:
+  - name: Autodidacta
+    percentage: 95
+    color: green
+  - name: Growth Mindset
+    percentage: 95
+    color: pink
+  - name: Resiliencia
+    percentage: 90
+    color: yellow
+  - name: Creatividad
+    percentage: 85
+    color: orange
+  - name: Teamwork
+    percentage: 85
+    color: pink
+  - name: Mental. Crítica
+    percentage: 80
+    color: sky

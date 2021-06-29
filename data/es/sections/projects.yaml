@@ -1,0 +1,81 @@
+# section information
+section:
+  name: Projects
+  id: projects
+  enable: true
+  weight: 20
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+# filter buttons
+buttons:
+- name: All
+  filter: "all"
+- name: Creator
+  filter: "creator"
+- name: Contributor
+  filter: "contrib"
+- name: Work In Progress
+  filter: "wip"
+
+# your projects
+projects:
+- name: Offensive Tor Toolkit
+  logo: images/sections/projects/offensive-tor-toolkit.png
+  role: Owner
+  timeline: "Jun 2020 - Present"
+  repo: https://github.com/atorrescogollo/offensive-tor-toolkit # If your project is a public repo on GitHub, then provide this link. it will show star count.
+  #url: "https://atorrescogollo.github.io/geekdoc/projects/offensive-tor-toolkit/"  # If your project is not a public repo but it has a website or any external details url then provide it here. don't provide "repo" and "url" simultaneously.
+  summary: |
+    Offensive Tor Toolkit is a series of tools that simplify the
+    **use of Tor** for typical **exploitation and post-exploitation tasks**.
+  tags: ["creator"]
+
+- name: Kubespray Deployer
+  logo: images/sections/skills/kubernetes.png
+  role: Owner
+  timeline: "Dic 2020 - Present"
+  repo: https://github.com/atorrescogollo/kubespray-deployer
+  summary: |
+    Kubespray Deployer is a wrapper for easily **deploying Kubernetes clusters**
+    with Kubespray with Docker.
+  tags: ["creator"]
+
+- name: "Ansible: github_repo module"
+  logo: images/sections/skills/ansible.png
+  role: Maintainer
+  timeline: "Ene 2021 - Present"
+  url: https://docs.ansible.com/ansible/latest/collections/community/general/github_repo_module.html
+  summary: |
+    **Manages Github repositories** using PyGithub library with Ansible technology.
+  tags: ["contrib"]
+
+- name: Linux Ansible
+  logo: images/sections/skills/ansible.png
+  role: Owner
+  timeline: "Dic 2020 - Present"
+  repo: https://github.com/atorrescogollo/linux-ansible
+  summary: |
+    Ansible Role for **Linux Server Configuration**.
+  tags: ["creator"]
+
+- name: Proxmox Ansible
+  logo: images/sections/skills/ansible.png
+  role: Owner
+  timeline: "Dic 2020 - Present"
+  repo: https://github.com/atorrescogollo/proxmox-ansible
+  summary: |
+    Ansible Role for **Proxmox procedures**.
+  tags: ["creator"]
+
+- name: Kiddie
+  logo: images/sections/projects/hackthiscompany.png
+  role: Owner
+  timeline: "Dic 2020 - Present"
+  repo: https://github.com/HackThisCompany/Kiddie
+  summary: |
+    Kiddie is a **CTF-like scenario** based on two VulnHub machines.
+    The main purpose is to **pentest on an AWS** infrastructure
+    scenario using **pivoting** and **Tor**.
+  tags: ["creator"]

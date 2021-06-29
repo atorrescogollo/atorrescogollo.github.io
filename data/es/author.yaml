@@ -1,0 +1,20 @@
+# some information about you
+name: "Álvaro Torres Cogollo"
+nickname: "Álvaro Torres Cogollo"
+# greeting message before your name. it will default to "Hi! I am" if not provided
+#greeting: "Bienvenido a mi blog personal. Soy "
+image: "images/author/atorrescogollo.png"
+# give your some contact information. they will be used in the footer
+contactInfo:
+  email: "atorrescogollo@gmail.com"
+  phone: "+34649534655"
+
+# some summary about what you do
+summary:
+  - Ingeniero DevOps
+  - Amante de Linux
+  - Defensor del software Open Source
+  - Kubernetes, Docker... contenedores
+  - Resolutivo
+  - Autodidacta
+  - Apasionado de la tecnología

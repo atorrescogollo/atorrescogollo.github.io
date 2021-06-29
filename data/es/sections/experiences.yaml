@@ -1,0 +1,69 @@
+# section information
+section:
+  name: Experiences
+  id: experiences
+  enable: true
+  weight: 40
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+# Your experiences
+experiences:
+- company:
+    name: Telefónica
+    url: "https://www.telefonica.com/es/web/about_telefonica/quienes_somos"
+    location: "Madrid, España"
+    # company overview
+    overview: |
+      La Unidad Global de Consumo Digital de Telefónica tiene como objetivo
+      **potenciar la innovación** en nuevos productos y servicios digitales,
+      con especial **foco en el hogar digital**.
+
+      El **rol de mi equipo** en esta sección de Telefónica es el de **ofrecer la
+      infraestructura y los servicios que los demás equipos de desarrollo necesitan**
+      para realizar su trabajo eficientemente. Esto incluye todas las etapas de
+      la filosofía DevOps: desde que el código fuente hasta la generación de artefactos
+      y despliegue de las versiones de desarrollo que acabarán formando el
+      producto final.
+  positions:
+  - designation: DevOps Engineer
+    start: Jul 2019
+    # don't provide end date if you are currently working there. It will be replaced by "Present"
+    # end: Dec 2020
+    # give some points about what was your responsibilities at the company.
+    responsibilities:
+    - Operación y mantenimiento de servicio **Jenkins as a Service**.
+    - Operación y mantenimiento de servicio de **Self-Hosted GitHub Runners as a Service**.
+    - Operación y mantenimiento de cluster **OpenShift**.
+    - Operación y mantenimiento de **portal interno de auto-provisión de infraestructura y gestión de costes** para clientes basado en Flask, SQLAlchemy, Redis, PyJenkins, etc.
+    - Operación y mantenimiento de servicio de monitorización con **Zabbix**.
+    - Operación y mantenimiento de stack **ELK** para analisis de logs.
+    - Operación y mantenimiento de ETLs con **Apache Airflow** para inventariado de recursos.
+    - Desarrollo y mantenimiento de automatismos con **Ansible y Terraform**.
+    - Operación y mantenimiento de **Keycloak** como IDP OpenID Connect/SAML.
+    - "Metodología Agile mixta con Jira: **Kanban** (soporte) y **Scrum** (desarrollo)."
+    - Soporte y **consultoría** para equipos de desarrollo.
+
+
+- company:
+    name: Adminia Sistemas S.L.
+    # url: "https://www.preexample.com"
+    location: "Madrid, España"
+    overview: |
+      Empresa de servicios de informática y microinformática para clientes relacionados con el ámbito universitario.
+  positions:
+  - designation: Administrador de sistemas Linux y FreeBSD
+    start: Sep 2018
+    end: Jun 2019
+    responsibilities:
+    - Administración de servicios en sistemas basados en **Linux** y **FreeBSD**.
+    - Operación y mantenimiento de monitorización con **Zabbix**.
+    - Ejecución de máquinas virtuales sobre hypervisor **XenServer**.
+    - Operación y mantenimiento de correo con **Postfix, Dovecot, SpamAssassin y ClamAV**.
+    - Operación y mantenimiento de servidor de DNS con **Bind9**.
+    - Firewall con **PfSense**.
+    - Operación y mantenimiento de HTTP Load Balancers y API gateways con **Apache2** y **Nginx**.
+    - Servicio de almacenamiento basado en **NextCloud**.
+    - Ticketing con **Trac by Edgewall**.
+

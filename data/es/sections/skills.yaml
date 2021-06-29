@@ -1,0 +1,62 @@
+# section information
+section:
+  name: Skills
+  id: skills
+  enable: true
+  weight: 30
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+# Your Skills.
+# Give a summary of you each skill in the summary section.
+skills:
+- name: Linux
+  logo: "images/sections/skills/linux.png"
+  summary: "Tengo un **nivel alto en administración de sistemas operativos basados en Linux**. Lo uso personal y profesionalmente."
+
+- name: Ansible
+  logo: "images/sections/skills/ansible.png"
+  summary: "Tengo un **nivel alto** en Ansible, con el que considero que se debería automatizar la mayor parte de la **gestión de configuración en sistemas** por su **facilidad de mantenimiento**. Destaco mi aportación del [módulo github_repo](https://docs.ansible.com/ansible/latest/collections/community/general/github_repo_module.html) al OpenSource."
+
+- name: Terraform
+  logo: "images/sections/skills/terraform.png"
+  summary: "He trabajado con Terraform en muchos de mis proyectos y soy partidario de usarlo como **herramienta de provisión predeterminada**. Destaco mi proyecto [Kiddie](https://github.com/HackThisCompany/Kiddie)."
+
+- name: Kubernetes
+  logo: "images/sections/skills/kubernetes.png"
+  summary: "Soy capaz de **operar y desarrollar en un entorno de Kubernetes** y de dar soporte a desarrolladores."
+  url: "https://kubernetes.io/"
+
+- name: Docker
+  logo: "images/sections/skills/docker.png"
+  summary: "Soy partidario de usar Docker para **empaquetar cualquier servicio** ya que fomenta la buena práctica de separar el entorno de ejecución de los datos de aplicación y **facilita el CI/CD**."
+
+- name: Python
+  logo: "images/sections/skills/python.png"
+  summary: "Junto con Bash, es **mi lenguaje de programación predominante**. Soy capaz de cubrir la mayor parte de mis necesidades con este lenguaje. He trabajado con Flask, Django, SQLAlchemy, Celery, Pandas, etc."
+  url: "https://python.org/"
+
+- name: Jenkins
+  logo: "images/sections/skills/jenkins.png"
+  summary: "Soy capaz de **operar y desarrollar pipelines en Groovy** orientadas a CI/CD y a IaaC (Infrastructure as Code). También **ofrecerlo como servicio** a equipos de desarrollo."
+
+- name: GitFlow
+  logo: "images/sections/skills/gitflow.png"
+  summary: "Mi forma de trabajar preferida es tener repositorios de **código como fuente de verdad**. Esto implica llevar a cabo todo el flujo de mantenimiento de código: issues, pull requests, tests, tags, releases, etc."
+
+- name: GitHub Actions
+  logo: "images/sections/skills/github-actions.png"
+  summary: "Soy partidario de usar GitHub Actions para la mayor parte de **operaciones de CI**: tests, construcción de artefactos e imágenes de Docker, etc."
+
+- name: ArgoCD
+  logo: "images/sections/skills/argocd.png"
+  summary: "ArgoCD como plataforma de **CD (Continuous Deployment)** y para mantenimiento de servicios en un entorno de Kubernetes."
+
+- name: Stack ELK
+  logo: "images/sections/skills/elk.png"
+  summary: "Tengo una amplia experiencia en el **desarrollo de pipelines de Logstash** para procesado de logs y considero que todo equipo debería tener centralizado sus logs en esta plataforma. Destaco mi post sobre [logstash-filter-verifier **en el blog de TheHackerWay**](https://thehackerway.com/2021/04/29/logstash-filter-verifier-mantenimiento-de-filtros-de-logstash-en-elk/)."
+
+- name: Apache Airflow
+  logo: "images/sections/skills/airflow.png"
+  summary: "He trabajado con Airflow para el **procesamiento de ETLs** y operaciones de inventariado de servicios y recursos."
