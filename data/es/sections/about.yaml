@@ -8,26 +8,24 @@ section:
   template: sections/about.html
 
 # your designation
-designation: Ingeniero DevOps
+designation: Cloud DevOps Engineer
 # your company information
 company:
-  name: Telefónica
-  url: "https://www.telefonica.com/es/web/about_telefonica/quienes_somos"
+  name: Too Good To Go
+  url: "https://toogoodtogo.es/"
 
 # your resume. this file path should be relative to you "static" directory
 resume: "files/CV_AlvaroTorresCogollo.pdf"
 
 # a summary about you
 summary: |
-  Soy un Ingeniero Telemático que trabaja como **Ingeniero DevOps**.
-  Empecé a estudiar de forma **autodidacta** sobre **Hacking Ético**
-  combinándolo con la universidad. Actualmente trabajo ofreciendo
-  infraestructura, servicios y soporte a equipos de desarrollo dentro
-  de **Telefónica**.
+  Soy Ingeniero Telemático y trabajo como Cloud DevOps Engineer
+  en la cloud pública AWS (Amazon Web Services) en la empresa
+  [Too Good To Go](https://toogoodtogo.es/).
 
-  He escrito artículos en el **blog técnico de seguridad
-  [TheHackerWay](https://thehackerway.com/author/atorrescogollo/)**
-  y algunas de las [**herramientas**](https://github.com/atorrescogollo)
+  Además, he escrito artículos en el blog técnico de seguridad
+  [TheHackerWay](https://thehackerway.com/author/atorrescogollo/)
+  y algunas de las [herramientas](https://github.com/atorrescogollo)
   más relevantes que he desarrollado son:
   [Offensive Tor Toolkit](https://github.com/atorrescogollo/offensive-tor-toolkit),
   [Kubespray Deployer](https://github.com/atorrescogollo/kubespray-deployer),
