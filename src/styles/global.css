@@ -1,0 +1,94 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/* Custom styling for markdown content */
+.prose {
+  @apply text-gray-700;
+}
+
+.prose h2 {
+  @apply text-xl font-bold mb-2 text-green-800 border-b-2 border-gray-200 pb-1 mt-5 first:mt-0;
+}
+
+.prose h3 {
+  @apply text-lg font-semibold mb-0.5 mt-6;
+}
+
+.prose h3 .job-title {
+  @apply text-green-600;
+}
+
+.prose h3 .company {
+  @apply text-green-800;
+}
+
+.prose h3 + p {
+  @apply text-sm text-gray-600 mb-2 mt-0;
+}
+
+.prose p {
+  @apply mb-2 leading-relaxed;
+}
+
+.prose ul {
+  @apply list-disc list-inside space-y-0.5 ml-4 mr-4 mb-2 pl-0 pr-0;
+}
+
+/* Responsive grid layout for skills section */
+.prose .skills-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-2;
+}
+
+.prose .skills-grid > div {
+  @apply min-w-0;
+}
+
+.prose .skills-grid ul {
+  @apply mb-0 list-none ml-0;
+}
+
+.prose .skills-grid li::before {
+  content: "✓ ";
+  color: #16a34a;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.prose li {
+  @apply text-gray-700;
+}
+
+.prose strong {
+  @apply text-gray-900 font-semibold;
+}
+
+/* Style for Responsibilities and Key accomplishments labels */
+.prose p > strong:only-child {
+  @apply block uppercase text-xs font-bold text-gray-700 tracking-wide mt-3 mb-1 pl-1 pr-1;
+}
+
+/* Adjust indentation for all lists in work experience sections */
+.prose h3 ~ ul {
+  @apply ml-1 mr-1;
+}
+
+.prose a {
+  @apply text-blue-600 hover:text-blue-800 transition-colors;
+}
+
+.prose table {
+  @apply w-full border-collapse mb-2;
+}
+
+.prose th,
+.prose td {
+  @apply py-0.5 px-2 text-left align-top;
+}
+
+.prose thead {
+  @apply hidden;
+}
+
+.prose table td {
+  @apply border-0;
+}
