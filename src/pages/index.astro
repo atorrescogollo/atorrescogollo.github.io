@@ -13,7 +13,7 @@ const { name, title, email, phone, linkedin, github, pdf } = frontmatter;
 		<link rel="sitemap" href="/sitemap-index.xml" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content="Professional resume and portfolio" />
+		<meta name="description" content={`Professional resume and portfolio of ${name}`} />
 		<title>Resume - {name}</title>
 	</head>
 	<body class="bg-gray-50 text-gray-900 antialiased">
