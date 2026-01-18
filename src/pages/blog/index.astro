@@ -1,0 +1,95 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogFilters from '../../components/blog/BlogFilters.astro';
+import BlogList from '../../components/blog/BlogList.astro';
+
+const allPosts = await getCollection('blog', ({ data }) => {
+  return data.draft !== true;
+});
+
+const sortedPosts = allPosts.sort((a, b) => {
+  return b.data.pubDate.valueOf() - a.data.pubDate.valueOf();
+});
+
+// Calculate tag counts
+const tagCounts = new Map<string, number>();
+sortedPosts.forEach((post) => {
+  (post.data.tags || []).forEach((tag) => {
+    tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1);
+  });
+});
+
+// Sort tags by count (descending), then alphabetically
+const allTags = Array.from(tagCounts.keys())
+  .sort((a, b) => {
+    const countDiff = (tagCounts.get(b) || 0) - (tagCounts.get(a) || 0);
+    return countDiff !== 0 ? countDiff : a.localeCompare(b);
+  });
+
+const tagsWithCounts = allTags.map(tag => ({
+  value: tag,
+  count: tagCounts.get(tag) || 0,
+}));
+
+// Extract all unique months (YYYY-MM format)
+function formatMonth(date: Date): string {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  return `${year}-${month}`;
+}
+
+// Calculate month counts
+const monthCounts = new Map<string, number>();
+sortedPosts.forEach((post) => {
+  const month = formatMonth(post.data.pubDate);
+  monthCounts.set(month, (monthCounts.get(month) || 0) + 1);
+});
+
+const allMonths = Array.from(monthCounts.keys())
+  .sort((a, b) => b.localeCompare(a)); // Sort descending (newest first)
+
+const monthsWithCounts = allMonths.map(month => ({
+  value: month,
+  count: monthCounts.get(month) || 0,
+}));
+
+// Prepare minimal post data for client-side filtering
+const postsData = sortedPosts.map((post) => ({
+  slug: post.slug,
+  title: post.data.title,
+  description: post.data.description,
+  tags: post.data.tags || [],
+  pubDate: post.data.pubDate.toISOString(),
+}));
+---
+
+<BaseLayout
+  title="Blog - Álvaro Torres Cogollo"
+  description="Technical blog posts about DevOps, Infrastructure as Code, and cloud engineering."
+>
+  <div class="max-w-6xl mx-auto">
+    {sortedPosts.length === 0 ? (
+      <div class="text-center py-12">
+        <p class="text-gray-600 dark:text-gray-400">
+          No blog posts yet. Check back soon!
+        </p>
+      </div>
+    ) : (
+      <div class="blog-layout">
+        <BlogFilters
+          allTags={tagsWithCounts}
+          allMonths={monthsWithCounts}
+          totalPosts={sortedPosts.length}
+        />
+        <BlogList posts={sortedPosts} />
+      </div>
+    )}
+  </div>
+
+  <!-- Embed post data for client-side filtering -->
+  <script type="application/json" id="blog-posts-data" set:html={JSON.stringify(postsData)} />
+
+  <!-- Import client-side filtering logic -->
+  <script src="../../scripts/blogFilters.ts"></script>
+</BaseLayout>
