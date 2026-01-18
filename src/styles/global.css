@@ -3,35 +3,35 @@
 
 /* Custom styling for markdown content */
 .prose {
-  @apply text-gray-700;
+  @apply text-sm sm:text-base text-gray-600 dark:text-gray-400;
 }
 
 .prose h2 {
-  @apply text-xl font-bold mb-2 text-green-800 border-b-2 border-gray-200 pb-1 mt-5 first:mt-0;
+  @apply text-base sm:text-lg font-bold mb-2 text-teal-700 dark:text-teal-500 border-b-2 border-teal-200 dark:border-teal-800 pb-1 mt-5 first:mt-0;
 }
 
 .prose h3 {
-  @apply text-lg font-semibold mb-0.5 mt-6;
+  @apply text-sm sm:text-base font-semibold mb-0.5 mt-6 text-teal-700 dark:text-teal-500;
 }
 
 .prose h3 .job-title {
-  @apply text-green-600;
+  @apply text-teal-600 dark:text-teal-500;
 }
 
 .prose h3 .company {
-  @apply text-green-800;
+  @apply text-teal-600 dark:text-teal-600;
 }
 
 .prose h3 + p {
-  @apply text-sm text-gray-600 mb-2 mt-0;
+  @apply text-xs sm:text-sm text-gray-500 dark:text-gray-500 mb-2 mt-0;
 }
 
 .prose p {
-  @apply mb-2 leading-relaxed;
+  @apply mb-2 leading-relaxed text-gray-600 dark:text-gray-400;
 }
 
 .prose ul {
-  @apply list-disc list-inside space-y-0.5 ml-4 mr-4 mb-2 pl-0 pr-0;
+  @apply list-disc list-inside space-y-0.5 ml-4 mr-4 mb-2 pl-0 pr-0 text-gray-600 dark:text-gray-400;
 }
 
 /* Responsive grid layout for skills section */
@@ -49,22 +49,22 @@
 
 .prose .skills-grid li::before {
   content: "✓ ";
-  color: #16a34a;
+  @apply text-teal-600 dark:text-teal-600;
   font-weight: bold;
   margin-right: 0.5rem;
 }
 
 .prose li {
-  @apply text-gray-700;
+  @apply text-gray-600 dark:text-gray-400;
 }
 
 .prose strong {
-  @apply text-gray-900 font-semibold;
+  @apply text-gray-700 dark:text-gray-300 font-semibold;
 }
 
 /* Style for Responsibilities and Key accomplishments labels */
 .prose p > strong:only-child {
-  @apply block uppercase text-xs font-bold text-gray-700 tracking-wide mt-3 mb-1 pl-1 pr-1;
+  @apply block uppercase text-xs font-bold text-teal-600 dark:text-teal-600 tracking-wide mt-3 mb-1 pl-1 pr-1;
 }
 
 /* Adjust indentation for all lists in work experience sections */
@@ -73,7 +73,7 @@
 }
 
 .prose a {
-  @apply text-blue-600 hover:text-blue-800 transition-colors;
+  @apply text-teal-600 dark:text-teal-600 hover:text-teal-700 dark:hover:text-teal-500 underline transition-colors;
 }
 
 .prose table {
@@ -82,7 +82,7 @@
 
 .prose th,
 .prose td {
-  @apply py-0.5 px-2 text-left align-top;
+  @apply py-0.5 px-2 text-left align-top text-gray-600 dark:text-gray-400;
 }
 
 .prose thead {
@@ -91,4 +91,215 @@
 
 .prose table td {
   @apply border-0;
+}
+
+/* Blog-specific styles */
+.blog-date {
+  @apply text-sm font-medium text-gray-600 dark:text-gray-400;
+}
+
+.blog-tag {
+  @apply inline-block px-3 py-1 text-xs font-medium rounded-full bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-200;
+}
+
+.blog-card {
+  @apply p-6 border border-gray-200 dark:border-gray-700 rounded-lg transition-all;
+}
+
+.blog-card:hover {
+  @apply border-teal-500 dark:border-teal-400 shadow-md;
+}
+
+/* Enhanced prose styles for blog content */
+.blog-content.prose h2 {
+  @apply text-xl font-bold mb-4 text-gray-900 dark:text-white border-b-2 border-teal-500 dark:border-teal-400 pb-2 mt-8 first:mt-0;
+}
+
+.blog-content.prose h3 {
+  @apply text-lg font-semibold mb-3 text-gray-900 dark:text-white mt-6;
+}
+
+.blog-content.prose p {
+  @apply mb-4 leading-relaxed text-gray-700 dark:text-gray-300;
+}
+
+.blog-content.prose ul {
+  @apply list-disc ml-6 mb-4 space-y-2;
+}
+
+.blog-content.prose ol {
+  @apply list-decimal ml-6 mb-4 space-y-2;
+}
+
+.blog-content.prose li {
+  @apply text-gray-700 dark:text-gray-300;
+}
+
+.blog-content.prose a {
+  @apply text-teal-700 dark:text-teal-400 hover:underline;
+}
+
+.blog-content.prose code {
+  @apply text-sm bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded text-teal-700 dark:text-teal-400;
+}
+
+.blog-content.prose pre {
+  @apply bg-gray-900 dark:bg-gray-950 p-4 rounded-lg overflow-x-auto mb-4;
+}
+
+.blog-content.prose pre code {
+  @apply bg-transparent text-gray-100 dark:text-gray-200 p-0;
+}
+
+.blog-content.prose blockquote {
+  @apply border-l-4 border-teal-500 dark:border-teal-400 pl-4 italic text-gray-700 dark:text-gray-300 my-4;
+}
+
+.blog-content.prose strong {
+  @apply font-semibold text-gray-900 dark:text-white;
+}
+
+/* Blog filtering styles */
+.blog-layout {
+  @apply flex flex-col gap-6;
+}
+
+/* Mobile-first: stacked layout */
+.filter-container {
+  @apply w-full;
+}
+
+.filter-header {
+  @apply mb-4;
+}
+
+.filter-sidebar-wrapper {
+  @apply w-full;
+}
+
+.filter-sidebar {
+  @apply space-y-6;
+}
+
+.filter-section {
+  @apply space-y-2;
+}
+
+.filter-label {
+  @apply block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2;
+}
+
+/* Search input */
+.search-input-wrapper {
+  @apply relative;
+}
+
+.search-icon {
+  @apply absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 dark:text-gray-500 pointer-events-none;
+}
+
+.search-input {
+  @apply w-full pl-10 pr-10 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors;
+}
+
+.clear-search-btn {
+  @apply absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors;
+}
+
+/* Tag filter buttons */
+.tag-filter-container {
+  @apply flex flex-wrap gap-2;
+}
+
+.tag-filter-btn {
+  @apply px-3 py-1.5 text-sm font-medium rounded-full border-2 border-teal-200 dark:border-teal-800 text-teal-700 dark:text-teal-400 bg-white dark:bg-gray-800 hover:border-teal-400 dark:hover:border-teal-600 transition-all cursor-pointer inline-flex items-center gap-1.5;
+}
+
+.tag-filter-btn .tag-name {
+  @apply font-medium;
+}
+
+.tag-filter-btn .tag-count {
+  @apply text-xs px-1.5 py-0.5 rounded-full bg-teal-100 dark:bg-teal-900 text-teal-700 dark:text-teal-300 font-semibold;
+}
+
+.tag-filter-btn.active {
+  @apply bg-teal-600 dark:bg-teal-700 text-white border-teal-600 dark:border-teal-700;
+}
+
+.tag-filter-btn.active .tag-count {
+  @apply bg-teal-500 dark:bg-teal-800 text-white;
+}
+
+.tag-filter-btn:hover {
+  @apply shadow-sm;
+}
+
+/* Load more button */
+.load-more-btn {
+  @apply w-full mt-2 px-3 py-2 text-xs font-medium text-teal-600 dark:text-teal-400 hover:text-teal-700 dark:hover:text-teal-300 hover:bg-teal-50 dark:hover:bg-teal-900/20 rounded-md transition-colors text-center;
+}
+
+/* Month filter list */
+.month-filter-list {
+  @apply space-y-1;
+}
+
+.month-filter-item {
+  @apply w-full flex justify-between items-center px-3 py-2 text-sm text-left text-gray-700 dark:text-gray-300 hover:bg-teal-50 dark:hover:bg-teal-900/20 rounded-md transition-colors cursor-pointer;
+}
+
+.month-filter-item[aria-pressed="true"] {
+  @apply bg-teal-100 dark:bg-teal-900/40 text-teal-900 dark:text-teal-100 font-medium;
+}
+
+.month-filter-label {
+  @apply flex-1;
+}
+
+.month-filter-count {
+  @apply text-xs text-gray-500 dark:text-gray-500 bg-gray-100 dark:bg-gray-700 px-2 py-0.5 rounded-full;
+}
+
+.month-filter-item[aria-pressed="true"] .month-filter-count {
+  @apply bg-teal-200 dark:bg-teal-800 text-teal-900 dark:text-teal-100;
+}
+
+/* Active filter pills */
+.active-filter-pill {
+  @apply inline-flex items-center px-3 py-1 text-xs font-medium rounded-full bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-200 hover:bg-teal-200 dark:hover:bg-teal-800 transition-colors;
+}
+
+/* Desktop layout: sidebar + posts */
+@media (min-width: 768px) {
+  .blog-layout {
+    @apply flex-row items-start;
+  }
+
+  .filter-container {
+    @apply w-64 flex-shrink-0;
+  }
+
+  .filter-sidebar {
+    @apply sticky top-6;
+  }
+
+  .filter-header {
+    @apply mb-6;
+  }
+
+  /* Blog posts wrapper takes remaining space */
+  .blog-posts-wrapper {
+    @apply flex-1;
+  }
+}
+
+/* Smooth transitions for filtering */
+.blog-post-item {
+  @apply transition-opacity duration-200;
+}
+
+/* Loading state */
+.filtering .blog-post-item {
+  @apply opacity-50;
 }
